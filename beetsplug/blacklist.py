@@ -31,7 +31,7 @@ def set_blacklist(lib, opts, args):
     for item in items:
         item.update({'blacklist':'true'})
         item.store()
-    print 'Blacklisted ' + str(len(items)) + ' items'
+    print ('Blacklisted ' + str(len(items)) + ' items')
 set_blacklist_command = Subcommand('blacklist',
                              help='mark the results of a query as blacklisted',
                              aliases=('blk',))
@@ -44,7 +44,7 @@ def clear_blacklist(lib, opts, args):
     for item in items:
         item.update({'blacklist':None})
         item.store()
-    print 'Cleared blacklisting for ' + str(len(items)) + ' items'
+    print ('Cleared blacklisting for ' + str(len(items)) + ' items')
 clear_blacklist_command = Subcommand('clearblacklist',
                             help='clear the blacklisting of the results of a query',
                             aliases=('cblk',))
